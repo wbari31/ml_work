@@ -3,6 +3,7 @@ import streamlit as st
 import numpy as np
 import joblib
 import pandas as pd
+from pathlib import Path
 
 st.set_page_config(page_title="Income Predictor", layout="centered")
 st.write("""This app predicts income.""")
