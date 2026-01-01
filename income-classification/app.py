@@ -8,10 +8,10 @@ from pathlib import Path
 st.set_page_config(page_title="Income Predictor", layout="centered")
 st.write("""This app predicts income.""")
 BASE_DIR = Path(__file__).resolve().parent
-model=joblib.load(BASE_DIR+'/xgbclassifier_classifier_model.pkl')
-scaler=joblib.load(BASE_DIR+'/scaler.pkl')
-te=joblib.load(BASE_DIR+'/target_encoder.pkl')
-pt=joblib.load(BASE_DIR+'/power_transformer_skewness_handler.pkl')
+model=joblib.load(BASE_DIR/'xgbclassifier_classifier_model.pkl')
+scaler=joblib.load(BASE_DIR/'scaler.pkl')
+te=joblib.load(BASE_DIR/'target_encoder.pkl')
+pt=joblib.load(BASE_DIR/'power_transformer_skewness_handler.pkl')
 
 #numerical features
 age = st.sidebar.number_input('age', 17, 90, 25)
